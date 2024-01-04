@@ -161,11 +161,11 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'duvrdx@gmail.com'
-EMAIL_HOST_PASSWORD = 'qikjgeuafhlbbmdq'
-DEFAULT_FROM_EMAIL = 'Amore'
-EMAIL_SUBJECT_PREFIX = '[Amore] '
+EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
+DEFAULT_FROM_EMAIL = os.environ.get("EMAIL_HOST_USER")
+EMAIL_SUBJECT_PREFIX = os.environ.get("EMAIL_SUBJECT_PREFIX")
 
-WHATSAPP_NUMBER = "+55 11 99999-9999"
+WHATSAPP_NUMBER = os.environ.get("WHATSAPP_NUMBER")
 
 ALLOWED_HOSTS = ["*"]
