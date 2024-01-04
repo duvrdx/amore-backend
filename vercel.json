@@ -1,0 +1,12 @@
+{
+  "builds":[
+    {
+      "src": "amora/wsgi.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "router":[{
+    "src": "/(.*)",
+    "dest": "amora/wsgi.py"
+  }]
+}
