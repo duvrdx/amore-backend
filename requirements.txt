@@ -8,9 +8,11 @@ Django==5.0
 django-cors-headers==4.3.1
 django-oauth-toolkit==2.3.0
 djangorestframework==3.14.0
+gunicorn==21.2.0
 idna==3.6
 jwcrypto==1.5.0
 oauthlib==3.2.2
+packaging==23.2
 Pillow==10.1.0
 pycparser==2.21
 pytz==2023.3.post1
