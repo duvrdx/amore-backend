@@ -5,7 +5,7 @@
       "use": "@vercel/python"
     }
   ],
-  "router":[{
+  "routes":[{
     "src": "/(.*)",
     "dest": "amora/wsgi.py"
   }]
