@@ -173,5 +173,17 @@ EMAIL_SUBJECT_PREFIX = os.environ["EMAIL_SUBJECT_PREFIX"]
 WHATSAPP_NUMBER = os.environ["WHATSAPP_NUMBER"]
 
 
-CORS_ALLOWED_ORIGINS = ["*"]
+CORS_ALLOWED_ORIGINS = [
+    os.environ["CORS_ALLOWED_ORIGINS"]
+]
+
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]
+
 ALLOWED_HOSTS = ["*"]
