@@ -23,7 +23,7 @@ class OrderSerializer(serializers.ModelSerializer):
   
   class Meta:
     model = Order
-    fields = ["id", "status", "costumer", "items", "total", "created_at"]
+    fields = ["id", "status", "customer", "items", "total", "created_at"]
     extra_kwargs = {'total': {'read_only': True}}
     
 class CartSerializer(serializers.ModelSerializer):
@@ -31,6 +31,6 @@ class CartSerializer(serializers.ModelSerializer):
   
   class Meta:
       model = Cart
-      fields = ["id", "costumer", "items", "total"]
+      fields = ["id", "customer", "items", "total"]
       extra_kwargs = {'total': {'read_only': True}}
     

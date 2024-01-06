@@ -5,7 +5,7 @@ from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from rest_framework import generics
 from rest_framework.response import Response
 from rest_framework import status
-from .utils import get_resume, send_order_to_admin, send_order_to_costumer
+from .utils import get_resume, send_order_to_admin, send_order_to_customer
 
 class ProductViewSet(viewsets.ModelViewSet):
   queryset = Product.objects.all()
@@ -36,7 +36,7 @@ class CartCheckoutView(generics.UpdateAPIView):
     
     try:
       order_resume = get_resume(order)
-      send_order_to_costumer(cart, order_resume)
+      send_order_to_customer(cart, order_resume)
       send_order_to_admin(cart, order_resume)
             
     except Exception as e:
